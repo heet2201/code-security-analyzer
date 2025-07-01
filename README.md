@@ -1,7 +1,7 @@
 # 🛡️ AI-Powered Code Security Analyzer
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Security](https://img.shields.io/badge/security-enhanced-green.svg)](https://github.com/blackbox-ai/ai-security-analyzer)
+[![Security](https://img.shields.io/badge/security-enhanced-green.svg)](https://github.com/heet2201/code-security-analyzer)
 
 > **Advanced Multi-Agent Security Analysis with LLM Integration**
 
@@ -280,8 +280,8 @@ jobs:
       
       - name: Install Security Analyzer
         run: |
-          git clone https://github.com/heet2201/ai-security-analyzer.git
-          cd ai-security-analyzer
+          git clone https://github.com/heet2201/code-security-analyzer.git
+          cd code-security-analyzer
           pip install -r requirements.txt
           pip install -e .
       
@@ -303,7 +303,7 @@ jobs:
 ### Project Structure
 
 ```
-ai-security-analyzer/
+code-security-analyzer/
 ├── security_analyzer/           # Main package
 │   ├── core/                   # Core architecture
 │   │   └── architecture.py     # Main orchestrator
@@ -381,8 +381,8 @@ Contributions are welcome!
 
 ```bash
 # Clone and setup development environment
-git clone https://github.com/blackbox-ai/ai-security-analyzer.git
-cd ai-security-analyzer
+git clone https://github.com/heet2201/code-security-analyzer.git
+cd code-security-analyzer
 
 # Create virtual environment
 python -m venv venv

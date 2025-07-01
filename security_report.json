@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-07-01T15:37:18.459434",
-  "repository_path": "examples/simple_test.py",
-  "total_files_scanned": 0,
-  "scan_duration": 0.27028322219848633,
+  "timestamp": "2025-07-01T16:48:55.289346",
+  "repository_path": "examples/",
+  "total_files_scanned": 1,
+  "scan_duration": 92.50133609771729,
   "findings": [
     {
-      "file_path": "./examples/simple_test.py",
+      "file_path": "examples/simple_test.py",
       "line_number": 9,
       "vulnerability_type": "default",
       "severity": "low",
@@ -16,10 +16,10 @@
       "confidence": "HIGH",
       "cwe_id": [],
       "tool_source": "Bandit",
-      "timestamp": "2025-07-01 15:37:18.729478"
+      "timestamp": "2025-07-01 16:48:55.404881"
     },
     {
-      "file_path": "./examples/simple_test.py",
+      "file_path": "examples/simple_test.py",
       "line_number": 14,
       "vulnerability_type": "hardcoded_secrets",
       "severity": "low",
@@ -30,10 +30,10 @@
       "confidence": "MEDIUM",
       "cwe_id": [],
       "tool_source": "Bandit",
-      "timestamp": "2025-07-01 15:37:18.729504"
+      "timestamp": "2025-07-01 16:48:55.404892"
     },
     {
-      "file_path": "./examples/simple_test.py",
+      "file_path": "examples/simple_test.py",
       "line_number": 22,
       "vulnerability_type": "default",
       "severity": "medium",
@@ -44,10 +44,10 @@
       "confidence": "LOW",
       "cwe_id": [],
       "tool_source": "Bandit",
-      "timestamp": "2025-07-01 15:37:18.729513"
+      "timestamp": "2025-07-01 16:48:55.404900"
     },
     {
-      "file_path": "./examples/simple_test.py",
+      "file_path": "examples/simple_test.py",
       "line_number": 33,
       "vulnerability_type": "default",
       "severity": "high",
@@ -58,10 +58,10 @@
       "confidence": "HIGH",
       "cwe_id": [],
       "tool_source": "Bandit",
-      "timestamp": "2025-07-01 15:37:18.729522"
+      "timestamp": "2025-07-01 16:48:55.404906"
     },
     {
-      "file_path": "./examples/simple_test.py",
+      "file_path": "examples/simple_test.py",
       "line_number": 39,
       "vulnerability_type": "default",
       "severity": "high",
@@ -72,27 +72,242 @@
       "confidence": "HIGH",
       "cwe_id": [],
       "tool_source": "Bandit",
-      "timestamp": "2025-07-01 15:37:18.729528"
+      "timestamp": "2025-07-01 16:48:55.404911"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 23,
+      "vulnerability_type": "default",
+      "severity": "medium",
+      "title": "python.lang.security.audit.formatted-sql-query.formatted-sql-query",
+      "description": "Detected possible formatted SQL query. Use parameterized queries instead.",
+      "code_snippet": "requires login",
+      "recommendation": "Review and address the security issue identified by Semgrep",
+      "confidence": "medium",
+      "cwe_id": [
+        "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      ],
+      "tool_source": "Semgrep",
+      "timestamp": "2025-07-01 16:49:02.237213"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 23,
+      "vulnerability_type": "default",
+      "severity": "high",
+      "title": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
+      "description": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy provides TextualSQL to easily used prepared statement with named parameters. For complex SQL composition, use SQL Expression Language or Schema Definition Language. In most cases, SQLAlchemy ORM will be a better option.",
+      "code_snippet": "requires login",
+      "recommendation": "Review and address the security issue identified by Semgrep",
+      "confidence": "medium",
+      "cwe_id": [
+        "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      ],
+      "tool_source": "Semgrep",
+      "timestamp": "2025-07-01 16:49:02.237228"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 33,
+      "vulnerability_type": "default",
+      "severity": "high",
+      "title": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+      "description": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "code_snippet": "requires login",
+      "recommendation": "Review and address the security issue identified by Semgrep",
+      "confidence": "medium",
+      "cwe_id": [
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      ],
+      "tool_source": "Semgrep",
+      "timestamp": "2025-07-01 16:49:02.237234"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 39,
+      "vulnerability_type": "default",
+      "severity": "medium",
+      "title": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
+      "description": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`.",
+      "code_snippet": "requires login",
+      "recommendation": "Review and address the security issue identified by Semgrep",
+      "confidence": "medium",
+      "cwe_id": [
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+      ],
+      "tool_source": "Semgrep",
+      "timestamp": "2025-07-01 16:49:02.237240"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 14,
+      "vulnerability_type": "sql_injection",
+      "severity": "critical",
+      "title": "SQL Injection Vulnerability",
+      "description": "The SQL query is constructed using direct string concatenation, allowing for SQL injection attacks.",
+      "code_snippet": "",
+      "recommendation": "Use parameterized queries or prepared statements to prevent SQL injection.",
+      "confidence": "0.95",
+      "cwe_id": [
+        "CWE-89"
+      ],
+      "tool_source": "LLM-openai/gpt-4o-mini",
+      "timestamp": "2025-07-01 16:49:15.228665"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 22,
+      "vulnerability_type": "command_injection",
+      "severity": "critical",
+      "title": "Command Injection Vulnerability",
+      "description": "User input is directly used in a shell command, which can lead to command injection attacks.",
+      "code_snippet": "",
+      "recommendation": "Avoid using shell=True in subprocess.run and validate or sanitize the input before using it.",
+      "confidence": "0.95",
+      "cwe_id": [
+        "CWE-78"
+      ],
+      "tool_source": "LLM-openai/gpt-4o-mini",
+      "timestamp": "2025-07-01 16:49:15.228675"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 7,
+      "vulnerability_type": "hardcoded_secrets",
+      "severity": "critical",
+      "title": "Hardcoded API Key",
+      "description": "The API key is hardcoded in the source code, which can lead to unauthorized access if the code is exposed.",
+      "code_snippet": "",
+      "recommendation": "Use environment variables or a secure vault to store sensitive information like API keys.",
+      "confidence": "0.95",
+      "cwe_id": [
+        "CWE-798"
+      ],
+      "tool_source": "LLM-openai/gpt-4o-mini",
+      "timestamp": "2025-07-01 16:49:45.635222"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 7,
+      "vulnerability_type": "hardcoded_secrets",
+      "severity": "critical",
+      "title": "Hardcoded API Key",
+      "description": "The API key is hardcoded in the source code, which can lead to unauthorized access if the code is exposed.",
+      "code_snippet": "",
+      "recommendation": "Use environment variables or a secure vault to store sensitive information like API keys.",
+      "confidence": "0.95",
+      "cwe_id": [
+        "CWE-798"
+      ],
+      "tool_source": "LLM-openai/gpt-4o-mini",
+      "timestamp": "2025-07-01 16:49:59.942781"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 7,
+      "vulnerability_type": "hardcoded_secrets",
+      "severity": "critical",
+      "title": "Hardcoded API Key",
+      "description": "The API key is hardcoded in the source code, which can lead to unauthorized access if the code is exposed.",
+      "code_snippet": "",
+      "recommendation": "Use environment variables or a secure vault to manage sensitive information like API keys.",
+      "confidence": "0.95",
+      "cwe_id": [
+        "CWE-798"
+      ],
+      "tool_source": "LLM-openai/gpt-4o-mini",
+      "timestamp": "2025-07-01 16:50:12.767907"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 32,
+      "vulnerability_type": "path_traversal",
+      "severity": "high",
+      "title": "Path Traversal Vulnerability",
+      "description": "The function allows for arbitrary file access due to lack of path validation, potentially exposing sensitive files.",
+      "code_snippet": "",
+      "recommendation": "Implement strict validation of the config_name input to ensure it does not contain path traversal characters.",
+      "confidence": "0.95",
+      "cwe_id": [
+        "CWE-22"
+      ],
+      "tool_source": "LLM-openai/gpt-4o-mini",
+      "timestamp": "2025-07-01 16:50:26.788542"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 41,
+      "vulnerability_type": "default",
+      "severity": "high",
+      "title": "Authentication Bypass for Admin",
+      "description": "The login function allows any user to authenticate as 'admin' without a valid password, leading to unauthorized access.",
+      "code_snippet": "",
+      "recommendation": "Implement proper authentication checks and ensure that all users must provide valid credentials.",
+      "confidence": "0.95",
+      "cwe_id": [
+        "CWE-287"
+      ],
+      "tool_source": "LLM-openai/gpt-4o-mini",
+      "timestamp": "2025-07-01 16:50:26.788548"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 20,
+      "vulnerability_type": "default",
+      "severity": "high",
+      "title": "Weak Password Hashing",
+      "description": "MD5 is used for hashing passwords, which is considered weak and vulnerable to collision attacks.",
+      "code_snippet": "",
+      "recommendation": "Use a stronger hashing algorithm such as bcrypt, Argon2, or PBKDF2 for password hashing.",
+      "confidence": "0.95",
+      "cwe_id": [
+        "CWE-916"
+      ],
+      "tool_source": "LLM-openai/gpt-4o-mini",
+      "timestamp": "2025-07-01 16:50:26.788554"
+    },
+    {
+      "file_path": "examples/simple_test.py",
+      "line_number": 48,
+      "vulnerability_type": "information_disclosure",
+      "severity": "high",
+      "title": "Exposure of Sensitive Information",
+      "description": "The debug_info function exposes sensitive information such as database credentials and API keys.",
+      "code_snippet": "",
+      "recommendation": "Remove or restrict access to functions that expose sensitive information, especially in production environments.",
+      "confidence": "0.95",
+      "cwe_id": [
+        "CWE-200"
+      ],
+      "tool_source": "LLM-openai/gpt-4o-mini",
+      "timestamp": "2025-07-01 16:50:26.788560"
     }
   ],
   "summary": {
-    "total_findings": 5,
-    "critical": 0,
-    "high": 2,
-    "medium": 1,
+    "total_findings": 18,
+    "critical": 5,
+    "high": 8,
+    "medium": 3,
     "low": 2,
     "info": 0,
     "files_with_findings": 1,
     "vulnerability_types": {
-      "default": 4,
-      "hardcoded_secrets": 1
+      "default": 10,
+      "hardcoded_secrets": 4,
+      "sql_injection": 1,
+      "command_injection": 1,
+      "path_traversal": 1,
+      "information_disclosure": 1
     },
     "tools_used": [
+      "LLM-openai/gpt-4o-mini",
+      "Semgrep",
       "Bandit"
     ]
   },
   "recommendations": [
-    "\u26a0\ufe0f 2 high-severity issues found",
+    "\ud83d\udea8 5 critical vulnerabilities need immediate attention",
+    "\u26a0\ufe0f 8 high-severity issues found",
     "\ud83d\udd04 Regular security updates recommended",
     "\ud83d\udcda Security training for development team"
   ],

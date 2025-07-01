@@ -38,8 +38,8 @@ A cutting-edge security analysis tool that combines the power of **AI-driven age
 
 ```bash
 # Clone the repository
-git clone https://github.com/blackbox-ai/ai-security-analyzer.git
-cd ai-security-analyzer
+git clone https://github.com/heet2201/code-security-analyzer.git
+cd code-security-analyzer
 
 # Install dependencies
 pip install -r requirements.txt

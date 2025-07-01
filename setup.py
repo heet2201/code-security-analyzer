@@ -16,7 +16,7 @@ setup(
     description="AI-Powered Code Security Analyzer with Multi-LLM Support",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/heet2201/ai-code-security-analyzer",
+    url="https://github.com/heet2201/code-security-analyzer",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",

@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-07-01T15:37:18.459434",
+  "repository_path": "examples/simple_test.py",
+  "total_files_scanned": 0,
+  "scan_duration": 0.27028322219848633,
+  "findings": [
+    {
+      "file_path": "./examples/simple_test.py",
+      "line_number": 9,
+      "vulnerability_type": "default",
+      "severity": "low",
+      "title": "blacklist",
+      "description": "Consider possible security implications associated with the subprocess module.",
+      "code_snippet": "8 import sqlite3\n9 import subprocess\n10 import hashlib\n",
+      "recommendation": "Review and fix the identified security issue",
+      "confidence": "HIGH",
+      "cwe_id": [],
+      "tool_source": "Bandit",
+      "timestamp": "2025-07-01 15:37:18.729478"
+    },
+    {
+      "file_path": "./examples/simple_test.py",
+      "line_number": 14,
+      "vulnerability_type": "hardcoded_secrets",
+      "severity": "low",
+      "title": "hardcoded_password_string",
+      "description": "Possible hardcoded password: 'password123'",
+      "code_snippet": "13 API_KEY = \"sk-1234567890abcdef\"\n14 DATABASE_PASSWORD = \"password123\"\n15 \n",
+      "recommendation": "Review and fix the identified security issue",
+      "confidence": "MEDIUM",
+      "cwe_id": [],
+      "tool_source": "Bandit",
+      "timestamp": "2025-07-01 15:37:18.729504"
+    },
+    {
+      "file_path": "./examples/simple_test.py",
+      "line_number": 22,
+      "vulnerability_type": "default",
+      "severity": "medium",
+      "title": "hardcoded_sql_expressions",
+      "description": "Possible SQL injection vector through string-based query construction.",
+      "code_snippet": "21     # Vulnerable: Direct string concatenation in SQL query\n22     query = f\"SELECT * FROM users WHERE username = '{username}'\"\n23     cursor.execute(query)\n",
+      "recommendation": "Review and fix the identified security issue",
+      "confidence": "LOW",
+      "cwe_id": [],
+      "tool_source": "Bandit",
+      "timestamp": "2025-07-01 15:37:18.729513"
+    },
+    {
+      "file_path": "./examples/simple_test.py",
+      "line_number": 33,
+      "vulnerability_type": "default",
+      "severity": "high",
+      "title": "subprocess_popen_with_shell_equals_true",
+      "description": "subprocess call with shell=True identified, security issue.",
+      "code_snippet": "32     command = f\"cat {filename}\"\n33     result = subprocess.run(command, shell=True, capture_output=True, text=True)\n34     return result.stdout\n",
+      "recommendation": "Review and fix the identified security issue",
+      "confidence": "HIGH",
+      "cwe_id": [],
+      "tool_source": "Bandit",
+      "timestamp": "2025-07-01 15:37:18.729522"
+    },
+    {
+      "file_path": "./examples/simple_test.py",
+      "line_number": 39,
+      "vulnerability_type": "default",
+      "severity": "high",
+      "title": "hashlib",
+      "description": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+      "code_snippet": "38     # Vulnerable: Using MD5 for password hashing (weak)\n39     return hashlib.md5(password.encode()).hexdigest()\n40 \n",
+      "recommendation": "Review and fix the identified security issue",
+      "confidence": "HIGH",
+      "cwe_id": [],
+      "tool_source": "Bandit",
+      "timestamp": "2025-07-01 15:37:18.729528"
+    }
+  ],
+  "summary": {
+    "total_findings": 5,
+    "critical": 0,
+    "high": 2,
+    "medium": 1,
+    "low": 2,
+    "info": 0,
+    "files_with_findings": 1,
+    "vulnerability_types": {
+      "default": 4,
+      "hardcoded_secrets": 1
+    },
+    "tools_used": [
+      "Bandit"
+    ]
+  },
+  "recommendations": [
+    "\u26a0\ufe0f 2 high-severity issues found",
+    "\ud83d\udd04 Regular security updates recommended",
+    "\ud83d\udcda Security training for development team"
+  ],
+  "scan_config": {},
+  "analyzer_version": "1.0.0"
+}

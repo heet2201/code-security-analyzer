@@ -375,7 +375,7 @@ python -m pytest --cov=security_analyzer tests/
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Contributions are welcome!
 
 ### Development Setup
 
@@ -399,4 +399,4 @@ pre-commit install
 
 ⭐ **Star this repository if you find it useful!** ⭐
 
-**Made with ❤️ by the Heet Shah** 
+**Made with ❤️ by Heet Shah** 
